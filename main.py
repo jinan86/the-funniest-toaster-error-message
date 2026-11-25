@@ -9,7 +9,12 @@ no input read.
 
 import os
 
-ENTRY = "SLOT_B: Unrecognized item. I have never met this bread before in my life."
+# The toaster reports which slot rejected the item, then denies ever
+# having met the bread. Deadpan, one voice, lands on a single read.
+SLOT = "SLOT_B"
+MESSAGE = "Unrecognized item. I have never met this bread before in my life."
+
+ENTRY = SLOT + ": " + MESSAGE
 
 
 def main() -> None:
